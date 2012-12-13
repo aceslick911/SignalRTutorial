@@ -1,0 +1,22 @@
+﻿using System;
+
+namespace SignalR
+{
+    public class SignalCommand
+    {
+        private const string SignalrCommand = "__SIGNALRCOMMAND__";
+
+        internal static string AddCommandSuffix(string eventKey)
+        {
+            return eventKey + "." + SignalrCommand;
+        }
+
+        public static bool IsCommand(Message message)
+        {
+            return message.Key.EndsWith(SignalrCommand, StringComparison.OrdinalIgnoreCase);
+        }
+
+        public CommandType Type { get; set; }
+        public string Value { get; set; }
+    }
+}
