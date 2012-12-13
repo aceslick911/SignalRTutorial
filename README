@@ -1,0 +1,5 @@
+Updated project to be compatible with Microsoft Visual Studio 2012 and Microsoft.SignalR 1.0Alpha
+
+Notes:
+- If unable to compile or run-time issues, ensure that you have enabled pre-release packages in NuGet and have re-installed the required NuGet packages.
+
